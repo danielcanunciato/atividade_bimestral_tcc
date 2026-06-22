@@ -24,7 +24,11 @@ export default function ExpensesList() {
             <ul>
                 {expenses.map((exp, index) => (
                     <>
-                        <li key={index}><b><CreditCard />{exp.item}</b> <br /> <i>R${exp.custo}</i><br />{exp.data}</li>
+                        <li key={index}>
+                            <span style={{lineHeight: '2', fontSize: '1.5em'}}><b><CreditCard style={{marginTop: '6px', marginRight: '6px'}} />{exp.item}</b></span> <br /> 
+                            <i><strong> R${exp.custo} </strong></i> <br />
+                            {exp.data}
+                        </li>
                     </>
                 ))}
             </ul>
