@@ -1,0 +1,50 @@
+:root {
+
+    /* Colors */
+    --bg-primary: #f4f6fb;
+    --bg-card: #ffffff;
+
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+
+    --income-color: #22c55e;
+    --expense-color: #ef4444;
+    --wallet-color: #2563eb;
+
+    --border-color: #e2e8f0;
+
+    /* Shadows */
+    --shadow-sm: 0 2px 8px rgba(0,0,0,.06);
+    --shadow-md: 0 8px 24px rgba(0,0,0,.08);
+
+    /* Radius */
+    --radius-sm: 12px;
+    --radius-md: 18px;
+    --radius-lg: 24px;
+
+    /* Transitions */
+    --transition: .25s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    font-family:
+        Inter,
+        system-ui,
+        sans-serif;
+
+    background: var(--bg-primary);
+    color: var(--text-primary);
+
+    min-height: 100vh;
+}
+
+#root {
+    min-height: 100vh;
+}

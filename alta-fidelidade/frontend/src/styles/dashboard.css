@@ -1,0 +1,125 @@
+.dashboard-container {
+    max-width: 1400px;
+    margin: auto;
+    padding: 32px;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 24px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    background: white;
+
+    padding: 12px 18px;
+
+    border-radius: var(--radius-md);
+
+    box-shadow: var(--shadow-sm);
+}
+
+.avatar {
+    width: 46px;
+    height: 46px;
+
+    border-radius: 50%;
+
+    background: #e2e8f0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+}
+
+.stats-carousel {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.card {
+    background: var(--bg-card);
+
+    border-radius: var(--radius-md);
+
+    box-shadow: var(--shadow-sm);
+
+    transition: var(--transition);
+
+    padding: 24px;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.stat-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.stat-card h4 {
+    font-size: .85rem;
+    letter-spacing: 1px;
+}
+
+.stat-card span {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.income h4,
+.income span {
+    color: var(--income-color);
+}
+
+.expense h4,
+.expense span {
+    color: var(--expense-color);
+}
+
+.wallet h4,
+.wallet span {
+    color: var(--wallet-color);
+}
+
+.chart-card {
+    min-height: 450px;
+}
+
+.chart-card h2 {
+    margin-bottom: 20px;
+}
+
+.pie-container {
+    height: 320px;
+}
+
+@media (max-width: 900px) {
+
+    .stats-carousel {
+        grid-template-columns: 1fr;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-container {
+        padding: 16px;
+    }
+
+    .stat-card span {
+        font-size: 1.5rem;
+    }
+}

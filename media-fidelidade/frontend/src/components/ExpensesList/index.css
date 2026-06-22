@@ -1,0 +1,20 @@
+.expenses-card {
+    min-height: 250px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.expenses-card h2 {
+    margin-bottom: 20px;
+}
+
+.expenses-card ul {
+    list-style: none;
+}
+
+.expenses-card li {
+    padding: 14px;
+
+    border-bottom: 1px solid
+        var(--border-color);
+}
