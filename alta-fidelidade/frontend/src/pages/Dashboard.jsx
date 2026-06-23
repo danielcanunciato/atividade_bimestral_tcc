@@ -10,7 +10,7 @@ export default function Dashboard() {
             <div className="welcome-container">
 
                 <h1>Dashboard</h1>
-                <p>Bem vindo de volta Pedro!</p>
+                <p>👋Bem vindo de volta Pedro!</p>
 
             </div>
 

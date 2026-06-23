@@ -3,7 +3,7 @@ import "./index.css"
 export default function ExpensesList() {
     const expenses = [
         {
-            item: "Netflix", custo: "1950,00" , data: "22-06-2026"
+            item: "Netflix", custo: "69,00" , data: "22-06-2026"
         },
         {
             item: "Internet", custo: "180,00" , data: "12-06-2026"

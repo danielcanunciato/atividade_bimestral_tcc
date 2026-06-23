@@ -49,7 +49,7 @@ const centerTextPlugin = {
         );
 
         ctx.fillStyle = "#1e293b";
-        ctx.font = "700 20px system-ui";
+        ctx.font = "700 14px system-ui";
 
         ctx.fillText(
             `R$ ${total.toLocaleString("pt-BR", {
@@ -77,7 +77,7 @@ export default function PieChartCard() {
         datasets: [
             {
                 data: [
-                    1950,
+                    69.99,
                     180,
                     200,
                     59.99
@@ -110,7 +110,7 @@ export default function PieChartCard() {
                     color: "#000000", // darker gray
 
                     font: {
-                        size: 22,
+                        size: 14,
                         weight: "500",
                         family: "system-ui"
                     },
