@@ -45,6 +45,12 @@ body {
     min-height: 100vh;
 }
 
+.screens {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+}
+
 #root {
     min-height: 100vh;
 }

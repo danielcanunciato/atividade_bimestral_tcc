@@ -1,9 +1,20 @@
 import Dashboard from "./pages/Dashboard";
+import LeftNav from "./components/LeftNav";
 import './App.css'
 
 function App() {
     return (
-        <Dashboard />
+
+        <>
+        
+            <div className="screens">
+
+                <LeftNav />
+                <Dashboard />
+
+            </div>
+        
+        </>
     );
 }
 
