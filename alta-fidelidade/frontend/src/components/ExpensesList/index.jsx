@@ -1,5 +1,4 @@
 import "./index.css"
-import { CreditCard } from 'react-flaticons'
 
 export default function ExpensesList() {
     const expenses = [
@@ -23,13 +22,13 @@ export default function ExpensesList() {
 
             <ul>
                 {expenses.map((exp, index) => (
-                    <>
-                        <li key={index}>
-                            <span style={{lineHeight: '2', fontSize: '1.5em'}}><b><CreditCard style={{marginTop: '6px', marginRight: '6px'}} />{exp.item}</b></span> <br /> 
+                    <div key={index}>
+                        <li>
+                            <span style={{lineHeight: '2', fontSize: '1.5em'}}><b>{exp.item}</b></span> <br /> 
                             <i><strong> R${exp.custo} </strong></i> <br />
                             {exp.data}
                         </li>
-                    </>
+                    </div>
                 ))}
             </ul>
         </>

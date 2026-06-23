@@ -24,6 +24,9 @@
 
     /* Transitions */
     --transition: .25s ease;
+
+    /* SideBar */
+    --sidebar-width: 220px;
 }
 
 * {
@@ -47,10 +50,68 @@ body {
 
 .screens {
     display: flex;
-    align-items: left;
-    justify-content: left;
+    min-height: 100vh;
 }
 
-#root {
-    min-height: 100vh;
+.nav-wrapper {
+    width: var(--sidebar-width);
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+}
+
+.dashboard-area {
+    flex: 1;
+    margin-left: var(--sidebar-width);
+
+    display: flex;
+    justify-content: center;
+}
+
+.mobile-header {
+    display: none;
+}
+
+.mobile-avatar {
+    width: 42px;
+    height: 42px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #3d4db7;
+    color: white;
+
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+    .dashboard-area {
+        margin-left: 0;
+        width: 100%;
+        display: block;
+    }
+
+    .mobile-header {
+        display: flex;
+
+        align-items: center;
+        gap: 12px;
+
+        padding: 16px;
+
+        background: var(--bg-card);
+
+        box-shadow: var(--shadow-sm);
+
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
+
+        z-index: 1100;
+    }
 }

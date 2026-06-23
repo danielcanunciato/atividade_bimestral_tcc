@@ -1,19 +1,37 @@
 .carousel-wrapper {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 20px;
     width: 100%;
+}
+
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 700ms cubic-bezier(.22, 1, .36, 1);
+    will-change: transform;
+}
+
+.carousel-track .stat-card {
+    min-width: 100%;
+    box-sizing: border-box;
 }
 
 .carousel-btn {
     border: none;
     background: transparent;
     cursor: pointer;
+
     font-size: 2rem;
     font-weight: bold;
-    transition: 0.2s;
+
     color: #666;
+
+    transition: .2s;
 }
 
 .carousel-btn:hover {
@@ -25,8 +43,10 @@
     background: var(--bg-card);
     border-radius: var(--radius-sm);
     box-shadow: var(--shadow-sm);
-    transition: var(--transition);
+
     padding: 24px;
+
+    transition: var(--transition);
 }
 
 .card:hover {
@@ -36,12 +56,11 @@
 
 .stat-card {
     width: 100%;
-    max-width: 500px;
     min-height: 180px;
 
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 
     gap: 24px;
 }
@@ -49,49 +68,52 @@
 .stat-card img {
     width: 90px;
     height: 90px;
-    filter: brightness(200%) drop-shadow(0 0 4px black);
+
     object-fit: contain;
     flex-shrink: 0;
+
+    filter: brightness(200%) drop-shadow(0 0 4px black);
 }
 
 .card-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     gap: 8px;
+
     filter: drop-shadow(0 0 4px black);
 }
 
 .card-content h4 {
     margin: 0;
+
     font-size: 0.9rem;
-    letter-spacing: 1px;
     font-weight: 700;
+    letter-spacing: 1px;
 }
 
 .card-content span {
     margin: 0;
+
     font-size: 2.2rem;
     font-weight: 700;
 }
 
 .income {
-    background-size: cover;
-    opacity: 1;
     background-image: url("/bgs/income_bg.png");
+    background-size: cover;
 }
 
 .expense {
-    background-position: 100% 85%;
-    background-size: cover;
-    opacity: 1;
     background-image: url("/bgs/expense_bg.png");
+    background-size: cover;
+    background-position: 100% 85%;
 }
 
 .wallet {
-    background-size: cover;
-    opacity: 1;
     background-image: url("/bgs/wallet_bg.png");
+    background-size: cover;
 }
 
 .income h4,
@@ -109,103 +131,11 @@
     color: var(--wallet-color);
 }
 
-/* Responsive */
-
-@media (max-width: 768px) {
-    .carousel-wrapper {
-        gap: 10px;
-    }
-
-    .stat-card {
-        min-height: 140px;
-        padding: 20px;
-        gap: 16px;
-    }
-
-    .stat-card img {
-        width: 70px;
-        height: 70px;
-    }
-
-    .card-content span {
-        font-size: 1.6rem;
-    }
-
-    .carousel-btn {
-        font-size: 1.5rem;
-    }
-}
-
-.carousel-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    width: 100%;
-}
-
-.carousel-container {
-    width: 100%;
-    overflow: hidden;
-}
-
-.carousel-track {
-    display: flex;
-    transition: transform 2.5s cubic-bezier(0.8, 0, 0.2, 1);
-    will-change: transform;
-}
-
-.carousel-track .stat-card {
-    min-width: 100%;
-    box-sizing: border-box;
-}
-
-.carousel-btn {
-    border: none;
-    background: transparent;
-    cursor: pointer;
-    font-size: 2rem;
-    color: #666;
-    transition: .2s;
-}
-
-.carousel-btn:hover {
-    transform: scale(1.1);
-}
-
-.stat-card {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    min-height: 180px;
-}
-
-.stat-card img {
-    width: 90px;
-    height: 90px;
-    object-fit: contain;
-}
-
-.card-content {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
-.card-content h4,
-.card-content span {
-    margin: 0;
-}
-
-.carousel-track {
-    display: flex;
-    transition:
-    transform 700ms cubic-bezier(.22, 1, .36, 1);
-}
-
 .carousel-dots {
     display: flex;
     justify-content: center;
     align-items: center;
+
     gap: 8px;
     margin-top: 12px;
 }
@@ -220,7 +150,8 @@
     background: rgba(35, 35, 35, 0.3);
 
     cursor: pointer;
-    transition: all 0.3s ease;
+
+    transition: all .3s ease;
 }
 
 .dot:hover {
@@ -228,6 +159,31 @@
 }
 
 .dot.active {
-    width: 28px;
+    width: 16px;
     background: rgb(0, 0, 0);
+}
+
+@media (max-width: 768px) {
+
+    .carousel-wrapper {
+        gap: 10px;
+    }
+
+    .carousel-btn {
+        font-size: 1.5rem;
+    }
+
+    .stat-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .stat-card img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .card-content span {
+        font-size: 1.6rem;
+    }
 }

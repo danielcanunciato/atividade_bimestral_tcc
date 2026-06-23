@@ -1,5 +1,4 @@
 import "../styles/dashboard.css";
-import Header from "../components/Header";
 import StatsCarousel from "../components/StatsCarousel";
 import ExpensesList from "../components/ExpensesList";
 import PieChartCard from "../components/PieChartCard";
@@ -7,7 +6,13 @@ import PieChartCard from "../components/PieChartCard";
 export default function Dashboard() {
     return (
         <div className="dashboard-container">
-            <Header />
+
+            <div className="welcome-container">
+
+                <h1>Dashboard</h1>
+                <p>Bem vindo de volta Pedro!</p>
+
+            </div>
 
             <StatsCarousel />
 
